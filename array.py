@@ -1,4 +1,4 @@
-#Monthy expences
+###A -> Monthy expences
 montly_expense = [['January', 2200], ['February', 2350],	#List of Lists /nested list
 				  ['March', 2600],['April', 2130],['May', 2190]]
 
@@ -34,3 +34,35 @@ for n in montly_expense:
 		n[1] = n[1] - 200
 
 print("April was updated: ",montly_expense)
+
+##B -> Heros
+heros=['spider man','thor','hulk','iron man','captain america']
+
+# 1. Length of the list
+print(len(heros))
+# 2. Add 'black panther' at the end of this list
+heros.append('black panther')
+print(heros)
+# 3. You realize that you need to add 'black panther' after 'hulk',
+#    so remove it from the list first and then add it after 'hulk'
+heros.remove('black panther')
+heros.insert(3,'black panther')
+print(heros)
+# 4. Now you don't like thor and hulk because they get angry easily :)
+#    So you want to remove thor and hulk from list and replace them with doctor strange
+#    Do that with one line of code.
+heros = [i for i in heros if i not in ('thor', 'hulk')]
+heros.insert(1,'doctor strange')
+#heros[1:3] = ["doctor strange"]
+print(heros)
+# 5. Sort the heros list in alphabetical order 
+# (Hint. Use dir() functions to list down all functions available in list)
+heros.sort()
+print(heros)
+
+###C -> Create a list of all odd numbers between 1 and a max number. 
+# Max number is something you need to take from a user using input() function
+
+m = input()
+print("You enter this max number: ",m)
+print("The list of odd numbers is: ",[m for m in range(1, int(m)+1) if m%2 != 0 ])
